@@ -1,3 +1,4 @@
+const path = require('path');
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -54,6 +55,10 @@ const config = {
 
 
 
+  plugins: [
+    path.resolve(__dirname, 'plugins/navbar-background-changer'),
+  ],
+
   presets: [
     [
       'classic',
@@ -99,7 +104,7 @@ const config = {
             type: 'custom',
             label: 'Change Background',
             position: 'right',
-            component: 'CustomBackgroundChanger', // This references the component in src/theme/NavbarItem/Component/
+            component: '@theme/CustomBackgroundChanger', // Reference the aliased component
           },
 
 
