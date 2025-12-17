@@ -1,27 +1,67 @@
+body {
+  /* Default background if no specific class is applied */
+  background-color: transparent; 
+  background-image: none;
+}
+
+body.has-bg-1 {
+  background-image: url('https://images.unsplash.com/photo-1701389803114-1e0e8e9c4d9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.has-bg-2 {
+  background-image: url('https://images.unsplash.com/photo-1701391624440-b6f3b0f5b9d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.has-bg-3 {
+  background-image: url('https://images.unsplash.com/photo-1701460395279-d29b20b2f5d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /**
  * Any CSS placed here will be imported automatically.
  */
 
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #FFFFFF;
+  --ifm-color-primary-dark: #F8F8F8;
+  --ifm-color-primary-darker: #F0F0F0;
+  --ifm-color-primary-darkest: #E8E8E8;
+  --ifm-color-primary-light: #FFFFFF;
+  --ifm-color-primary-lighter: #FFFFFF;
+  --ifm-color-primary-lightest: #FFFFFF;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+.navbar {
+  background-color: #A52A2A; /* Brown color */
+}
+
+main, article, .main-wrapper, .doc-wrapper, .container, .hero--primary {
+  background-color: transparent !important;
+}
+
+.docMainContainer, .theme-doc-markdown, .markdown, .docItemCol {
+  background-color: transparent !important;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #BBBBBB;
+  --ifm-color-primary-dark: #A0A0A0;
+  --ifm-color-primary-darker: #909090;
+  --ifm-color-primary-darkest: #808080;
+  --ifm-color-primary-light: #CCCCCC;
+  --ifm-color-primary-lighter: #DDDDDD;
+  --ifm-color-primary-lightest: #EEEEEE;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

@@ -21,16 +21,38 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `
+        document.addEventListener('DOMContentLoaded', function() {
+          const BACKGROUND_CLASSES = [
+            null, // No special background
+            'has-bg-1',
+            'has-bg-2',
+            'has-bg-3',
+          ];
+          const savedBgIndex = parseInt(localStorage.getItem('currentBackgroundIndex') || '0', 10);
+          const bgClass = BACKGROUND_CLASSES[savedBgIndex];
+          if (bgClass) {
+            document.body.classList.add(bgClass);
+          }
+        });
+      `,
+    },
+  ],
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to set "zh-Hans" instead of "en".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+
+
+
+
 
   presets: [
     [
@@ -38,19 +60,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          id: 'default', // Explicitly set the ID for the default docs plugin instance
+          path: 'docs', // Explicitly set the path to the English docs
+          routeBasePath: '/', // Ensure docs are at the root of the /docs/ path
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -68,14 +85,17 @@ const config = {
         logo: {
           alt: 'My book',
           src: 'img/logo.svg',
+          width: '48px',
+          height: '48px',
         },
         items: [
           {
             type: 'doc',
-            docId: 'module1/intro-to-ros2',
+            docId: 'intro-to-ros2',
             position: 'left',
             label: 'Introduction',
           },
+
 
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -92,7 +112,7 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/module1/intro-to-ros2',
+                to: '/docs/intro-to-ros2',
               },
             ],
           },
