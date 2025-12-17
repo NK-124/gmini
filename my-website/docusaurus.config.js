@@ -96,8 +96,10 @@ const config = {
             label: 'Introduction',
           },
           {
-            type: 'customBackgroundChanger', // Use the custom type defined in ComponentTypes.js
+            type: 'custom',
+            label: 'Change Background',
             position: 'right',
+            component: 'CustomBackgroundChanger', // This references the component in src/theme/NavbarItem/Component/
           },
 
 
