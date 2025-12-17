@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -7,40 +7,11 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
-const BACKGROUND_CLASSES = [
-  null, // No special background
-  'has-bg-1',
-  'has-bg-2',
-  'has-bg-3',
-];
-
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
-  const applyBackground = (bgClass) => {
-    document.body.classList.remove(...BACKGROUND_CLASSES.filter(Boolean));
-    if (bgClass) {
-      document.body.classList.add(bgClass);
-    }
-  };
-
-  useEffect(() => {
-    // Apply background on initial load based on localStorage
-    const savedBgIndex = parseInt(localStorage.getItem('currentBackgroundIndex') || '0', 10);
-    applyBackground(BACKGROUND_CLASSES[savedBgIndex]);
-  }, []);
-
   const handleStartReadingClick = () => {
-    const defaultBgIndex = 1; // Or any other default background
-    localStorage.setItem('currentBackgroundIndex', defaultBgIndex.toString());
-    applyBackground(BACKGROUND_CLASSES[defaultBgIndex]);
-  };
-
-  const handleBackgroundChangeClick = () => {
-    let currentBgIndex = parseInt(localStorage.getItem('currentBackgroundIndex') || '0', 10);
-    currentBgIndex = (currentBgIndex + 1) % BACKGROUND_CLASSES.length;
-    localStorage.setItem('currentBackgroundIndex', currentBgIndex.toString());
-    applyBackground(BACKGROUND_CLASSES[currentBgIndex]);
+    localStorage.setItem('alternateBackground', 'true');
   };
 
   return (
@@ -55,11 +26,6 @@ function HomepageHeader() {
             onClick={handleStartReadingClick}>
             Start Reading
           </Link>
-          <button
-            className="button button--secondary button--lg"
-            onClick={handleBackgroundChangeClick}>
-            Change Background
-          </button>
         </div>
       </div>
     </header>

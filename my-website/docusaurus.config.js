@@ -95,6 +95,10 @@ const config = {
             position: 'left',
             label: 'Introduction',
           },
+          {
+            type: 'customBackgroundChanger', // Use the custom type defined in ComponentTypes.js
+            position: 'right',
+          },
 
 
           {
