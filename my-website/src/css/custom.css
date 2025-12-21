@@ -1,38 +1,50 @@
 body {
   /* Default background if no specific class is applied */
-  background-color: transparent; 
   background-image: none;
 }
 
-body.has-bg-1 {
-  background-image: url('https://images.unsplash.com/photo-1701389803114-1e0e8e9c4d9a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+/* Navbar background */
+.navbar {
+  background-color: #8B4513; /* Saddle Brown color */
 }
 
-body.has-bg-2 {
-  background-image: url('https://images.unsplash.com/photo-1701391624440-b6f3b0f5b9d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+/* Override for light mode navbar color */
+html[data-theme='light'] .navbar {
+  background-color: rgb(53, 208, 53) !important;
+  background-image: none !important;
 }
 
-body.has-bg-3 {
-  background-image: url('https://images.unsplash.com/photo-1701460395279-d29b20b2f5d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+/* Light mode backgrounds for navbar, header, footer */
+html[data-theme='light'] .navbar,
+html[data-theme='light'] .hero--primary,
+html[data-theme='light'] .footer {
+  background-image: url('https://images.unsplash.com/photo-1667312939934-60fc3bfa4ec0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2tzfGVufDB8fDB8fHww') !important;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-/**
- * Any CSS placed here will be imported automatically.
- */
+/* Dark mode backgrounds for navbar, header, footer */
+html[data-theme='dark'] .navbar,
+html[data-theme='dark'] .hero--primary,
+html[data-theme='dark'] .footer {
+  background-image: url('https://images.unsplash.com/photo-1528112818652-9f2326201b16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') !important;
+  background-size: cover;
+  background-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
+/* General overrides for main content to ensure transparency */
+main, article, .main-wrapper, .doc-wrapper, .container, .docMainContainer, .theme-doc-markdown, .markdown, .docItemCol {
+  background-color: transparent !important;
+}
 
+/* Other existing styles */
 :root {
-  --ifm-color-primary: #FFFFFF;
-  --ifm-color-primary-dark: #F8F8F8;
+  --ifm-color-primary: #efe7e7; /* Orange color for text in light mode */
+  --ifm-color-primary-dark: #ebe1e1;
   --ifm-color-primary-darker: #F0F0F0;
   --ifm-color-primary-darkest: #E8E8E8;
   --ifm-color-primary-light: #FFFFFF;
@@ -42,26 +54,68 @@ body.has-bg-3 {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
-  background-color: #A52A2A; /* Brown color */
-}
-
-main, article, .main-wrapper, .doc-wrapper, .container, .hero--primary {
-  background-color: transparent !important;
-}
-
-.docMainContainer, .theme-doc-markdown, .markdown, .docItemCol {
-  background-color: transparent !important;
-}
-
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #BBBBBB;
-  --ifm-color-primary-dark: #A0A0A0;
-  --ifm-color-primary-darker: #909090;
-  --ifm-color-primary-darkest: #808080;
-  --ifm-color-primary-light: #CCCCCC;
-  --ifm-color-primary-lighter: #DDDDDD;
-  --ifm-color-primary-lightest: #EEEEEE;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #831717;
+  --ifm-color-primary-dark: #9b1717;
+  --ifm-color-primary-darker: #a32424;
+  --ifm-color-primary-darkest: #aa1e1e;
+  --ifm-color-primary-light: #c62525;
+  --ifm-color-primary-lighter: #dc2b2b;
+  --ifm-color-primary-lightest: #a91919;
+  --docusaurus-highlighted-code-line-bg: rgba(176, 43, 43, 0.3);
+}
+
+.button--secondary {
+  background-color: rgb(174, 168, 135)
+}
+
+
+
+html[data-theme='light'] .book-display-image {
+  display: none;
+}
+
+html[data-theme='dark'] .book-display-image {
+  display: block; /* Images are typically block-level in Docusaurus's hero section */
+}
+
+
+html[data-theme='dark'] .light-mode-image {
+  display: none;
+}
+
+html[data-theme='light'] .light-mode-image {
+  display: block; /* Images are typically block-level in Docusaurus's hero section */
+}
+
+
+html[data-theme='light'] .theme-doc-sidebar-container {
+  background-color: rgb(81, 82, 78) !important;
+}
+
+html[data-theme='light'] .menu__list-item--collapsible .menu__link,
+html[data-theme='light'] .menu__list-item--leaf .menu__link {
+  color: blue !important;
+}
+
+html[data-theme='light'] main,
+html[data-theme='light'] article,
+html[data-theme='light'] .theme-doc-markdown,
+html[data-theme='light'] .markdown {
+  color: #0b0c0c !important;
+}
+
+
+html[data-theme='light'] .footer {
+  color: #f9f6f6 !important;
+}
+
+
+html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
+  background-image: url('https://images.unsplash.com/photo-1765915968433-86d4d13ae1a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8') !important;
+  background-size: cover;
+  background-position: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }

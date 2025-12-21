@@ -1,0 +1,12 @@
+<svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Laptop Screen Background -->
+  <rect x="5" y="15" width="90" height="60" rx="5" fill="#333333"/>
+  <rect x="10" y="20" width="80" height="50" rx="2" fill="#222222"/>
+
+  <!-- Simple Book Icon -->
+  <rect x="30" y="30" width="40" height="40" rx="3" fill="#66BB6A"/>
+  <path d="M70 30L80 35V70L70 65V30Z" fill="#55AA55"/>
+  <path d="M30 30L20 35V70L30 65V30Z" fill="#55AA55"/>
+  <path d="M30 65L70 65L70 70L30 70L30 65Z" fill="#449944"/>
+  <line x1="50" y1="30" x2="50" y2="65" stroke="#FFFFFF" stroke-width="1"/>
+</svg>

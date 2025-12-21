@@ -1,4 +1,3 @@
-const path = require('path');
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
@@ -7,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The Robotic Nervous System (ROS 2)',
+  title: 'Robotic Nervous System',
   tagline: 'AI students and developers entering humanoid robotics',
   favicon: 'img/favicon.ico',
 
@@ -17,6 +16,8 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/robotics-book/',
 
+
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
@@ -25,52 +26,15 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  headTags: [
-    {
-      tagName: 'script',
-      attributes: {},
-      innerHTML: `
-        document.addEventListener('DOMContentLoaded', function() {
-          const BACKGROUND_CLASSES = [
-            null, // No special background
-            'has-bg-1',
-            'has-bg-2',
-            'has-bg-3',
-          ];
-          const savedBgIndex = parseInt(localStorage.getItem('currentBackgroundIndex') || '0', 10);
-          const bgClass = BACKGROUND_CLASSES[savedBgIndex];
-          if (bgClass) {
-            document.body.classList.add(bgClass);
-          }
-        });
-      `,
-    },
-  ],
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to set "zh-Hans" instead of "en".
-
-
-
-
-
-  plugins: [
-    path.resolve(__dirname, 'plugins/navbar-background-changer'),
-  ],
-
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          id: 'default', // Explicitly set the ID for the default docs plugin instance
-          path: 'docs', // Explicitly set the path to the English docs
-          routeBasePath: '/', // Ensure docs are at the root of the /docs/ path
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-
+          id: 'default',
+          path: 'docs',
+          routeBasePath: '/',
         },
         blog: false,
         theme: {
@@ -83,12 +47,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'The Robotic Nervous System (ROS 2)',
+        title: 'Robotic Nervous System',
         logo: {
-          alt: 'My book',
+          alt: 'Robotic Nervous System Logo',
           src: 'img/logo.svg',
           width: '48px',
           height: '48px',
@@ -96,18 +59,10 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro-to-ros2',
+            docId: 'module1/introduction-to-ros2/what-is-ros2',
             position: 'left',
             label: 'Introduction',
           },
-          {
-            type: 'custom',
-            label: 'Change Background',
-            position: 'right',
-            component: '@theme/CustomBackgroundChanger', // Reference the aliased component
-          },
-
-
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -123,7 +78,7 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/intro-to-ros2',
+                to: '/module1/introduction-to-ros2/what-is-ros2',
               },
             ],
           },
@@ -147,7 +102,6 @@ const config = {
           {
             title: 'More',
             items: [
-
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
