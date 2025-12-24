@@ -1,0 +1,211 @@
+/* my-website/src/css/robot.css */
+
+.robot-container {
+  position: absolute;
+  width: 200px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.7); /* Adjust size */
+  animation: idle-robot 4s infinite ease-in-out;
+}
+
+.robot-head {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f0f0; /* Matte White */
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+  animation: head-bob 2s infinite ease-in-out;
+}
+
+.robot-neck {
+  width: 20px;
+  height: 20px;
+  background-color: #silver;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+  box-shadow: 0 0 8px 2px #00FFFF; /* Subtle Cyan Glow */
+  z-index: 5;
+}
+
+.robot-body {
+  width: 120px;
+  height: 120px;
+  background-color: #f0f0f0; /* Matte White */
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  top: -15px;
+  z-index: 1;
+  animation: body-breathe 4s infinite ease-in-out;
+}
+
+.robot-shoulder-joint {
+  width: 25px;
+  height: 25px;
+  background-color: #silver;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px; /* Relative to robot-body */
+  left: -15px;
+  box-shadow: 0 0 8px 2px #00FFFF; /* Subtle Cyan Glow */
+  z-index: 2;
+}
+
+.robot-arm {
+  width: 20px;
+  height: 60px;
+  background-color: #f0f0f0; /* Matte White */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 70px; /* Relative to robot-body */
+  left: -25px;
+  transform-origin: top center;
+  animation: arm-swing 3s infinite ease-in-out;
+  z-index: 0;
+}
+
+.robot-elbow-joint {
+  width: 20px;
+  height: 20px;
+  background-color: #silver;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px; /* Relative to robot-arm */
+  left: 0;
+  box-shadow: 0 0 8px 2px #00FFFF; /* Subtle Cyan Glow */
+  z-index: 1;
+}
+
+.robot-forearm {
+  width: 20px;
+  height: 50px;
+  background-color: #f0f0f0; /* Matte White */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 60px; /* Relative to robot-arm */
+  left: 0;
+  transform-origin: top center;
+  animation: forearm-rotate 2.5s infinite ease-in-out;
+  z-index: 0;
+}
+
+.robot-hand {
+  width: 25px;
+  height: 20px;
+  background-color: #silver;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 55px; /* Relative to robot-forearm */
+  left: -2.5px;
+  z-index: 1;
+}
+
+.robot-hip-joint {
+  width: 30px;
+  height: 30px;
+  background-color: #silver;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px; /* Relative to robot-body */
+  left: calc(50% - 15px);
+  box-shadow: 0 0 8px 2px #00FFFF; /* Subtle Cyan Glow */
+  z-index: 2;
+}
+
+.robot-leg {
+  width: 25px;
+  height: 70px;
+  background-color: #f0f0f0; /* Matte White */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -80px; /* Relative to robot-body */
+  left: calc(50% - 12.5px);
+  transform-origin: top center;
+  animation: leg-movement 3.5s infinite ease-in-out;
+  z-index: 0;
+}
+
+.robot-knee-joint {
+  width: 25px;
+  height: 25px;
+  background-color: #silver;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px; /* Relative to robot-leg */
+  left: 0;
+  box-shadow: 0 0 8px 2px #00FFFF; /* Subtle Cyan Glow */
+  z-index: 1;
+}
+
+.robot-shin {
+  width: 25px;
+  height: 60px;
+  background-color: #f0f0f0; /* Matte White */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  top: 70px; /* Relative to robot-leg */
+  left: 0;
+  transform-origin: top center;
+  animation: shin-movement 3s infinite ease-in-out;
+  z-index: 0;
+}
+
+.robot-foot {
+  width: 40px;
+  height: 20px;
+  background-color: #silver;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 65px; /* Relative to robot-shin */
+  left: -7.5px;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes idle-robot {
+  0%, 100% { transform: translateY(0) scale(0.7); }
+  50% { transform: translateY(-5px) scale(0.7); }
+}
+
+@keyframes head-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes body-breathe {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.02); }
+}
+
+@keyframes arm-swing {
+  0%, 100% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+}
+
+@keyframes forearm-rotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes leg-movement {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes shin-movement {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}

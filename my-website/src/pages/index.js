@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import '@site/src/css/robot.css';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -53,6 +54,39 @@ function HomepageHeader() {
                             Module 4
                           </Link>
                         </div>
+                      </div>
+                      <div className="robot-container">
+                          <div className="robot-head"></div>
+                          <div className="robot-neck"></div>
+                          <div className="robot-body">
+                              <div className="robot-hip-joint"></div>
+                              <div className="robot-shoulder-joint" style={{left: '-15px'}}></div>
+                              <div className="robot-arm" style={{left: '-25px'}}>
+                                  <div className="robot-elbow-joint"></div>
+                                  <div className="robot-forearm">
+                                      <div className="robot-hand"></div>
+                                  </div>
+                              </div>
+                              <div className="robot-shoulder-joint" style={{right: '-15px', left: 'auto'}}></div>
+                              <div className="robot-arm" style={{right: '-25px', left: 'auto'}}>
+                                  <div className="robot-elbow-joint"></div>
+                                  <div className="robot-forearm">
+                                      <div className="robot-hand"></div>
+                                  </div>
+                              </div>
+                              <div className="robot-leg" style={{left: 'calc(50% - 30px)'}}>
+                                  <div className="robot-knee-joint"></div>
+                                  <div className="robot-shin">
+                                      <div className="robot-foot"></div>
+                                  </div>
+                              </div>
+                              <div className="robot-leg" style={{left: 'calc(50% + 5px)'}}>
+                                  <div className="robot-knee-joint"></div>
+                                  <div className="robot-shin">
+                                      <div className="robot-foot"></div>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
 
                     </div>
