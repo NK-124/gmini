@@ -16,7 +16,7 @@
   height: 80px;
   background-color: #A9A9A9; /* DarkGray for a more metallic look */
   border: 2px solid #ccc;
-  border-radius: 50%;
+  border-radius: 10px;
   position: relative;
   z-index: 10;
   animation: head-bob 2s infinite ease-in-out;
@@ -26,12 +26,12 @@
 }
 
 .robot-eye {
-  width: 15px;
-  height: 15px;
-  background-color: #100d0dff; /* Dark color for eyes */
-  border-radius: 50%;
+  width: 30px;
+  height: 10px;
+  background-color: #333; /* Dark color for eyes */
+  border-radius: 5px / 15px; /* Horizontal oval */
   position: absolute;
-  top: 25px;
+  top: 30px;
   animation: eye-blink 5s infinite;
 }
 
@@ -150,7 +150,7 @@
   background-color: #C0C0C0;
   border-radius: 50%;
   position: absolute;
-  bottom: -15px; /* Relative to robot-body */
+  bottom: -5px; /* Relative to robot-body */
   left: calc(50% - 15px);
   box-shadow: 0 0 8px 2px #00FFFF; /* Subtle Cyan Glow */
   z-index: 2;
@@ -162,7 +162,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   position: absolute;
-  bottom: -80px; /* Relative to robot-body */
+  bottom: 50px; /* Relative to robot-body */
   left: calc(50% - 12.5px);
   transform-origin: top center;
   animation: leg-movement 3.5s infinite ease-in-out;
@@ -183,7 +183,7 @@
 
 .robot-shin {
   width: 25px;
-  height: 60px;
+  height: 80px;
   background-color: #A9A9A9; /* DarkGray for a more metallic look */
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -196,8 +196,8 @@
 }
 
 .robot-foot {
-  width: 40px;
-  height: 20px;
+  width: 35px;
+  height: 30px;
   background-color: #C0C0C0;
   border: 1px solid #ccc;
   border-radius: 5px;
