@@ -54,7 +54,7 @@ function HomepageHeader() {
                           </Link>
                         </div>
                       </div>
-                      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJkbDR0M3JkZzVldGtxa3c2aXQ5M2pnb3V1M3czZTVzajR0aG4zMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cOZXwzX2QzKq9N2Z0h/giphy.gif" alt="Animated Robot" style={{height: '300px', marginLeft: '1rem'}}/>
+
                     </div>
 
         </div>
