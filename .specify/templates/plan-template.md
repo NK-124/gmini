@@ -31,13 +31,12 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- [ ] **Specification-First Development**: Does the `spec.md` exist and is it complete?
-- [ ] **Strict Technical Correctness**: Are all technical claims and statements in `research.md` backed by authoritative sources?
-- [ ] **Concise, Developer-Centric Documentation**: Is the `quickstart.md` clear and easy to follow for a developer?
-- [ ] **Fully Repeatable Process**: Does the plan outline a clear, repeatable process for setup, build, and deployment?
-- [ ] **Key Standards Adherence**: Does the plan adhere to the defined technology stack (Docusaurus, FastAPI, etc.)?
-- [ ] **Grounded Responses**: If applicable, does the RAG chatbot's design strictly limit responses to book content?
-- [ ] **Reproducibility**: Is the entire end-to-end process reproducible as documented?
+- [ ] **Humanoid Form Factor**: Does the design specify a humanoid, animation-ready 3D robot body?
+- [ ] **Aesthetic and Appearance**: Does the design prioritize clean geometry, smooth joints, and a friendly appearance?
+- [ ] **Material and Lighting**: Does the design use matte white and silver materials with a subtle cyan glow at the joints?
+- [ ] **Style and Quality**: Is the style specified as Pixar/Blender-quality, semi-realistic, and softly lit?
+- [ ] **Content Restrictions**: Does the design exclude weapons, human skin, logos, and cluttered backgrounds?
+- [ ] **Production Readiness**: Is the output required to be rig-friendly and production-ready?
 
 ## Project Structure
 
