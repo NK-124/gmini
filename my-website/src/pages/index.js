@@ -25,36 +25,37 @@ function HomepageHeader() {
         </h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem'}}>
-          <div style={{display: 'flex', alignItems: 'center', marginRight: '5rem'}}> {/* New container for button and new image */}
-            <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-              <div style={{display: 'flex', flexDirection: 'row', marginBottom: '1rem'}}>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/module1/introduction-to-ros2/what-is-ros2"
-                  style={{marginRight: '1rem'}}>
-                  Module 1
-                </Link>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/module2/introduction-to-digital-twins/what-is-a-digital-twin">
-                  Module 2
-                </Link>
-              </div>
-              <div style={{display: 'flex', flexDirection: 'row'}}>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/module3/introduction-to-ai-robot-brain/what-is-nvidia-isaac-platform"
-                  style={{marginRight: '1rem'}}>
-                  Module 3
-                </Link>
-                <Link
-                  className="button button--secondary button--lg"
-                  to="/module4/introduction-to-vision-language-action/the-convergence-of-llms-and-robotics">
-                  Module 4
-                </Link>
-              </div>
-            </div>
-          </div>
+                    <div style={{display: 'flex', alignItems: 'center', marginRight: '5rem'}}> {/* New container for button and new image */}
+                      <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: '1rem'}}>
+                          <Link
+                            className="button button--secondary button--lg"
+                            to="/module1/introduction-to-ros2/what-is-ros2"
+                            style={{marginRight: '1rem'}}>
+                            Module 1
+                          </Link>
+                          <Link
+                            className="button button--secondary button--lg"
+                            to="/module2/introduction-to-digital-twins/what-is-a-digital-twin">
+                            Module 2
+                          </Link>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                          <Link
+                            className="button button--secondary button--lg"
+                            to="/module3/introduction-to-ai-robot-brain/what-is-nvidia-isaac-platform"
+                            style={{marginRight: '1rem'}}>
+                            Module 3
+                          </Link>
+                          <Link
+                            className="button button--secondary button--lg"
+                            to="/module4/introduction-to-vision-language-action/the-convergence-of-llms-and-robotics">
+                            Module 4
+                          </Link>
+                        </div>
+                      </div>
+                      <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJkbDR0M3JkZzVldGtxa3c2aXQ5M2pnb3V1M3czZTVzajR0aG4zMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cOZXwzX2QzKq9N2Z0h/giphy.gif" alt="Animated Robot" style={{height: '300px', marginLeft: '1rem'}}/>
+                    </div>
 
         </div>
       </div>
