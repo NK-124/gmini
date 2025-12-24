@@ -26,17 +26,36 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem'}}>
           <div style={{display: 'flex', alignItems: 'center', marginRight: '5rem'}}> {/* New container for button and new image */}
-            <div className={styles.buttons}>
-              <Link
-                className="button button--secondary button--lg"
-                to="/robotics-book/module1/introduction-to-ros2/what-is-ros2"
-                onClick={handleStartReadingClick}>
-                Start Reading
-              </Link>
+            <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              <div style={{display: 'flex', flexDirection: 'row', marginBottom: '1rem'}}>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="/module1/introduction-to-ros2/what-is-ros2"
+                  style={{marginRight: '1rem'}}>
+                  Module 1
+                </Link>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="/module2/introduction-to-digital-twins/what-is-a-digital-twin">
+                  Module 2
+                </Link>
+              </div>
+              <div style={{display: 'flex', flexDirection: 'row'}}>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="/module3/introduction-to-ai-robot-brain/what-is-nvidia-isaac-platform"
+                  style={{marginRight: '1rem'}}>
+                  Module 3
+                </Link>
+                <Link
+                  className="button button--secondary button--lg"
+                  to="/module4/introduction-to-vision-language-action/the-convergence-of-llms-and-robotics">
+                  Module 4
+                </Link>
+              </div>
             </div>
-            <img className="light-mode-image" src={MOCKUP_MAGAZINE_IMAGE_URL} alt="Mockup Magazine" style={{height: '300px', marginLeft: '1rem'}}/>
           </div>
-          <img className="book-display-image" src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGJvb2tzfGVufDB8fDB8fHww" alt="Books" style={{maxWidth: '40%'}}/>
+
         </div>
       </div>
     </header>
