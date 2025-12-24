@@ -56,7 +56,11 @@ function HomepageHeader() {
                         </div>
                       </div>
                       <div className="robot-container">
-                          <div className="robot-head"></div>
+                          <div className="robot-head">
+                              <div className="robot-eye robot-eye-left"></div>
+                              <div className="robot-eye robot-eye-right"></div>
+                              <div className="robot-mouth"></div>
+                          </div>
                           <div className="robot-neck"></div>
                           <div className="robot-body">
                               <div className="robot-hip-joint"></div>

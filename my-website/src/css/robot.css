@@ -20,12 +20,47 @@
   position: relative;
   z-index: 10;
   animation: head-bob 2s infinite ease-in-out;
+  display: flex; /* Enable flexbox for positioning eyes and mouth */
+  justify-content: center;
+  align-items: center;
+}
+
+.robot-eye {
+  width: 15px;
+  height: 15px;
+  background-color: #333; /* Dark color for eyes */
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  animation: eye-blink 5s infinite;
+}
+
+.robot-eye-left {
+  left: 15px;
+}
+
+.robot-eye-right {
+  right: 15px;
+}
+
+.robot-mouth {
+  width: 30px;
+  height: 5px;
+  background-color: #333; /* Dark color for mouth */
+  border-radius: 2px;
+  position: absolute;
+  bottom: 20px;
+}
+
+@keyframes eye-blink {
+  0%, 20%, 25%, 100% { transform: scaleY(1); }
+  22% { transform: scaleY(0.1); }
 }
 
 .robot-neck {
   width: 20px;
   height: 20px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border-radius: 50%;
   position: relative;
   top: -10px;
@@ -48,7 +83,7 @@
 .robot-shoulder-joint {
   width: 25px;
   height: 25px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border-radius: 50%;
   position: absolute;
   top: 60px; /* Relative to robot-body */
@@ -74,7 +109,7 @@
 .robot-elbow-joint {
   width: 20px;
   height: 20px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border-radius: 50%;
   position: absolute;
   top: 50px; /* Relative to robot-arm */
@@ -100,7 +135,7 @@
 .robot-hand {
   width: 25px;
   height: 20px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border: 1px solid #ccc;
   border-radius: 5px;
   position: absolute;
@@ -112,7 +147,7 @@
 .robot-hip-joint {
   width: 30px;
   height: 30px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border-radius: 50%;
   position: absolute;
   bottom: -15px; /* Relative to robot-body */
@@ -138,7 +173,7 @@
 .robot-knee-joint {
   width: 25px;
   height: 25px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border-radius: 50%;
   position: absolute;
   top: 60px; /* Relative to robot-leg */
@@ -164,7 +199,7 @@
 .robot-foot {
   width: 40px;
   height: 20px;
-  background-color: #silver;
+  background-color: #C0C0C0;
   border: 1px solid #ccc;
   border-radius: 5px;
   position: absolute;
