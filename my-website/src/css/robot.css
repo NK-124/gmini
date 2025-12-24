@@ -25,6 +25,26 @@
   align-items: center;
 }
 
+.robot-antenna {
+  width: 8px;
+  height: 20px;
+  background-color: #C0C0C0; /* Silver */
+  border: 1px solid #999;
+  border-radius: 2px;
+  position: absolute;
+  top: -15px; /* Position above head */
+}
+
+.robot-antenna-left {
+  left: 15px;
+  transform: rotate(-15deg);
+}
+
+.robot-antenna-right {
+  right: 15px;
+  transform: rotate(15deg);
+}
+
 .robot-eye {
   width: 30px;
   height: 10px;
