@@ -1,0 +1,284 @@
+/* my-website/src/css/robot.css */
+
+/* CSS Variables for easy theme adjustments */
+:root {
+  --robot-primary-color: #A9A9A9; /* DarkGray for body parts */
+  --robot-secondary-color: #C0C0C0; /* Silver for joints and accents */
+  --robot-glow-color: #00FFFF; /* Cyan glow */
+  --robot-eye-color: #333;
+  --robot-mouth-color: #333;
+}
+
+.robot-container {
+  width: 50vw; /* Use viewport width for responsiveness */
+  max-width: 250px; /* Limit maximum width */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* Align robot to bottom of its container */
+  position: relative; /* For absolute positioning of parts inside */
+  transform: translateY(-50px) scale(0.8); /* Adjust overall position and size */
+  animation: idle-robot 4s infinite ease-in-out;
+}
+
+/* Base styles for all robot body parts */
+.robot-body-part {
+  position: absolute;
+  background-color: var(--robot-primary-color); /* Fallback */
+  background-image: linear-gradient(
+    to bottom right,
+    #B0B0B0 0%,   /* Lighter silver-gray */
+    #E0E0E0 20%,   /* Highlight */
+    #808080 80%,   /* Shadow */
+    #B0B0B0 100%   /* Mid-tone silver-gray */
+  );
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Base styles for all joints */
+.robot-joint {
+  position: absolute;
+  background-color: var(--robot-secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 8px 4px var(--robot-glow-color); /* Enhanced glow */
+  z-index: 2;
+  animation: pulsating-glow 2s infinite alternate; /* Add pulsating animation */
+}
+
+/* Head */
+.robot-head {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px; /* Rounded rectangle */
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: head-bob 2s infinite ease-in-out;
+}
+
+.robot-eye {
+  width: 20px;
+  height: 8px;
+  background-color: var(--robot-eye-color);
+  border-radius: 4px / 10px; /* Horizontal oval */
+  position: absolute;
+  top: 25px;
+  z-index: 6;
+}
+
+.robot-eye-left { left: 10px; }
+.robot-eye-right { right: 10px; }
+
+.robot-mouth {
+  width: 25px;
+  height: 3px;
+  background-color: var(--robot-mouth-color);
+  border-radius: 2px;
+  position: absolute;
+  bottom: 15px;
+  z-index: 6;
+}
+
+.robot-antenna {
+  width: 5px;
+  height: 25px;
+  background-color: var(--robot-secondary-color);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  position: absolute;
+  top: -20px;
+  z-index: 4;
+}
+
+.robot-antenna-left { left: 10px; transform: rotate(-15deg); }
+.robot-antenna-right { right: 10px; transform: rotate(15deg); }
+
+/* Torso */
+.robot-torso {
+  width: 100px;
+  height: 150px;
+  border-radius: 15px;
+  top: 60px; /* Below head */
+  z-index: 1;
+  animation: body-breathe 4s infinite ease-in-out;
+}
+
+/* Shoulder Joints */
+.robot-shoulder-left, .robot-shoulder-right {
+  width: 20px;
+  height: 20px;
+  top: 10px; /* Relative to torso */
+}
+.robot-shoulder-left { left: -10px; }
+.robot-shoulder-right { right: -10px; }
+
+/* Arm Assembly */
+.robot-arm-assembly {
+  position: absolute;
+  width: 30px; /* Container for arm parts */
+  height: 100px;
+  top: 25px; /* Adjust relative to torso */
+  z-index: 0;
+  animation: arm-swing 3s infinite ease-in-out;
+  transform-origin: top center;
+}
+.robot-arm-assembly-left { left: -45px; }
+.robot-arm-assembly-right { right: -45px; }
+
+
+.robot-upper-arm {
+  width: 20px;
+  height: 40px;
+  border-radius: 5px;
+  top: 0;
+  left: 5px;
+  transform-origin: top center;
+}
+
+/* Elbow Joints */
+.robot-elbow-left, .robot-elbow-right {
+  width: 15px;
+  height: 15px;
+  top: 35px; /* Relative to upper arm start */
+}
+.robot-elbow-left { left: 7.5px; }
+.robot-elbow-right { left: 7.5px; }
+
+.robot-forearm {
+  width: 20px;
+  height: 35px;
+  border-radius: 5px;
+  top: 50px; /* Relative to upper arm start */
+  left: 5px;
+  animation: forearm-rotate 2.5s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+/* Wrist Joints */
+.robot-wrist-left, .robot-wrist-right {
+  width: 12px;
+  height: 12px;
+  top: 80px; /* Relative to upper arm start */
+}
+.robot-wrist-left { left: 9px; }
+.robot-wrist-right { left: 9px; }
+
+.robot-hand {
+  width: 25px;
+  height: 15px;
+  border-radius: 3px;
+  top: 90px; /* Relative to upper arm start */
+  left: 2.5px;
+}
+
+/* Hip Joints */
+.robot-hip-left, .robot-hip-right {
+  width: 25px;
+  height: 25px;
+  bottom: 0; /* Relative to torso bottom */
+}
+.robot-hip-left { left: 15px; }
+.robot-hip-right { right: 15px; }
+
+/* Leg Assembly */
+.robot-leg-assembly {
+  position: absolute;
+  width: 30px;
+  height: 150px;
+  bottom: 0; /* Adjust relative to torso */
+  z-index: 0;
+  animation: leg-movement 3.5s infinite ease-in-out;
+  transform-origin: top center;
+}
+.robot-leg-assembly-left { left: 15px; }
+.robot-leg-assembly-right { right: 15px; }
+
+.robot-upper-leg {
+  width: 25px;
+  height: 60px;
+  border-radius: 8px;
+  top: 0;
+  left: 2.5px;
+  transform-origin: top center;
+}
+
+/* Knee Joints */
+.robot-knee-left, .robot-knee-right {
+  width: 20px;
+  height: 20px;
+  top: 55px; /* Relative to upper leg start */
+}
+.robot-knee-left { left: 5px; }
+.robot-knee-right { left: 5px; }
+
+.robot-shin {
+  width: 25px;
+  height: 55px;
+  border-radius: 8px;
+  top: 70px; /* Relative to upper leg start */
+  left: 2.5px;
+  animation: shin-movement 3s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+/* Ankle Joints */
+.robot-ankle-left, .robot-ankle-right {
+  width: 18px;
+  height: 18px;
+  top: 120px; /* Relative to upper leg start */
+}
+.robot-ankle-left { left: 6px; }
+.robot-ankle-right { left: 6px; }
+
+.robot-foot {
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  top: 135px; /* Relative to upper leg start */
+  left: -5px;
+}
+
+@keyframes pulsating-glow {
+  0% { box-shadow: 0 0 8px 4px var(--robot-glow-color); }
+  100% { box-shadow: 0 0 15px 7px var(--robot-glow-color); }
+}
+
+/* Animations */
+@keyframes idle-robot {
+  0%, 100% { transform: translateY(-50px) scale(0.8); } /* Adjust scale */
+  50% { transform: translateY(-55px) scale(0.8); }
+}
+
+@keyframes head-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-2px) rotate(2deg); }
+}
+
+@keyframes body-breathe {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.01); }
+}
+
+@keyframes arm-swing {
+  0%, 100% { transform: rotateX(0deg); }
+  50% { transform: rotateX(10deg); }
+}
+
+@keyframes forearm-rotate {
+  0%, 100% { transform: rotateX(0deg); }
+  50% { transform: rotateX(-20deg); }
+}
+
+@keyframes leg-movement {
+  0%, 100% { transform: rotateX(0deg); }
+  50% { transform: rotateX(5deg); }
+}
+
+@keyframes shin-movement {
+  0%, 100% { transform: rotateX(0deg); }
+  50% { transform: rotateX(-5deg); }
+}

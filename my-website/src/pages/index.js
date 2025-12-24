@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+import '@site/src/css/robot.css';
 
 
 function HomepageHeader() {
@@ -56,6 +57,57 @@ function HomepageHeader() {
                           </Link>
                         </div>
                       </div>
+                      {/* Start Robot HTML Structure */}
+                      <div className="robot-container">
+                          {/* Head Assembly */}
+                          <div className="robot-body-part robot-head">
+                              <div className="robot-eye robot-eye-left"></div>
+                              <div className="robot-eye robot-eye-right"></div>
+                              <div className="robot-mouth"></div>
+                              <div className="robot-antenna robot-antenna-left"></div>
+                              <div className="robot-antenna robot-antenna-right"></div>
+                          </div>
+                          {/* Torso Assembly */}
+                          <div className="robot-body-part robot-torso">
+                              {/* Left Arm Assembly */}
+                              <div className="robot-joint robot-shoulder-left"></div>
+                              <div className="robot-arm-assembly robot-arm-assembly-left">
+                                  <div className="robot-body-part robot-upper-arm"></div>
+                                  <div className="robot-joint robot-elbow-left"></div>
+                                  <div className="robot-body-part robot-forearm"></div>
+                                  <div className="robot-joint robot-wrist-left"></div>
+                                  <div className="robot-body-part robot-hand"></div>
+                              </div>
+                              {/* Right Arm Assembly */}
+                              <div className="robot-joint robot-shoulder-right"></div>
+                              <div className="robot-arm-assembly robot-arm-assembly-right">
+                                  <div className="robot-body-part robot-upper-arm"></div>
+                                  <div className="robot-joint robot-elbow-right"></div>
+                                  <div className="robot-body-part robot-forearm"></div>
+                                  <div className="robot-joint robot-wrist-right"></div>
+                                  <div className="robot-body-part robot-hand"></div>
+                              </div>
+                              {/* Left Leg Assembly */}
+                              <div className="robot-joint robot-hip-left"></div>
+                              <div className="robot-leg-assembly robot-leg-assembly-left">
+                                  <div className="robot-body-part robot-upper-leg"></div>
+                                  <div className="robot-joint robot-knee-left"></div>
+                                  <div className="robot-body-part robot-shin"></div>
+                                  <div className="robot-joint robot-ankle-left"></div>
+                                  <div className="robot-body-part robot-foot"></div>
+                              </div>
+                              {/* Right Leg Assembly */}
+                              <div className="robot-joint robot-hip-right"></div>
+                              <div className="robot-leg-assembly robot-leg-assembly-right">
+                                  <div className="robot-body-part robot-upper-leg"></div>
+                                  <div className="robot-joint robot-knee-right"></div>
+                                  <div className="robot-body-part robot-shin"></div>
+                                  <div className="robot-joint robot-ankle-right"></div>
+                                  <div className="robot-body-part robot-foot"></div>
+                              </div>
+                          </div>
+                      </div>
+                      {/* End Robot HTML Structure */}
 
 
                     </div>
