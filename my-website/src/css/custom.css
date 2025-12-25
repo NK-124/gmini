@@ -178,11 +178,11 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
 
   /* --- Revised: Show Dark/Light mode toggle on navbar right side of title on mobile --- */
   /* Hide the toggle from the hero--primary section */
-  .hero--primary .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  .hero--primary .toggleButton_gllP {
     display: none !important;
   }
   /* Hide the toggle from the mobile sidebar if it somehow appears there */
-  .navbar-sidebar__items .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  .navbar-sidebar__items .toggleButton_gllP {
     display: none !important;
   }
 
@@ -194,7 +194,7 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
   }
 
   /* Force the toggle button to be visible and position it */
-  .navbar__item.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  .navbar__item.toggleButton_gllP {
     display: flex !important; /* Ensure it's visible */
     /* No need for margin-left: auto here if space-between handles it */
   }
