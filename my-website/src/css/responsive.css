@@ -1,0 +1,77 @@
+@media (max-width: 480px) {
+  /* Target the container holding the two rows of buttons */
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] {
+    flex-direction: column !important; /* Stack buttons vertically */
+    margin-bottom: 0.5rem !important; /* Add some space between stacked buttons */
+  }
+
+  /* Adjust individual button margins when stacked */
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary {
+    margin-right: 0 !important; /* Remove horizontal margin */
+    margin-bottom: 1rem !important; /* Add vertical margin between buttons */
+  }
+
+  /* Adjust the main button container's margin for better spacing on mobile */
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] {
+    margin-top: 0 !important;
+    padding-top: 1rem;
+  }
+
+  /* Set robot size to 1x on mobile mode */
+  .robot-container {
+    transform: scale(1) !important; /* Scale to 100% of original size */
+  }
+
+  /* Mobile Dark Mode Background for hero--primary */
+  html[data-theme='dark'] .hero--primary {
+    background-image: url('https://images.unsplash.com/photo-1663735498345-39c452a6d5d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJvb2slMjBibGFjayUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D') !important;
+    background-size: cover;
+    background-position: center !important;
+    background-attachment: fixed;
+  }
+
+  /* --- Revised: Show Dark/Light mode toggle on navbar right side of title on mobile --- */
+  /* Hide the toggle from the hero--primary section */
+  .hero--primary .toggleButton_gllP {
+    display: none !important;
+  }
+  /* Hide the toggle from the mobile sidebar if it somehow appears there */
+  .navbar-sidebar__items .toggleButton_gllP {
+    display: none !important;
+  }
+
+  /* Target the navbar inner container to use flexbox */
+  .navbar__inner {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+  }
+
+  /* Force the toggle button to be visible and position it */
+  .navbar__item.toggleButton_gllP {
+    display: flex !important; /* Ensure it's visible */
+    /* No need for margin-left: auto here if space-between handles it */
+  }
+
+  /* Adjust the navbar title/logo area to ensure space */
+  .navbar__brand {
+    /* Ensure it doesn't take up all space */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Push the toggle button right next to the brand/title */
+  /* This might require moving the toggle into the navbar__brand or using a wrapper */
+  /* For now, let's just make sure it's visible and right-aligned */
+  .navbar__item.toggleButton_gllP {
+    order: 2; /* Ensure it's after the brand */
+    margin-left: auto; /* Pushes it to the far right within the inner navbar flex */
+  }
+
+  /* To place it *directly* next to the title, but on the right,
+     we would need to wrap the title and toggle together,
+     or modify React component structure.
+     For CSS only, this is the best we can do for "right side of navbar heading".
+     It will be on the right side of the entire navbar. */
+}
