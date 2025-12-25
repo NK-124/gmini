@@ -182,6 +182,10 @@
   animation: hand-move-left 0.5s forwards; /* Apply hand-move-left animation on hover */
 }
 
+.robot-container:hover .robot-arm-assembly-left {
+  animation: hand-move-right 0.5s forwards; /* Apply hand-move-right animation on hover */
+}
+
 /* Hip Joints */
 .robot-hip-left, .robot-hip-right {
   width: 25px;
@@ -293,4 +297,9 @@
 @keyframes hand-move-left {
   from { transform: translateX(0); }
   to { transform: translateX(-40px); }
+}
+
+@keyframes hand-move-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(40px); }
 }
