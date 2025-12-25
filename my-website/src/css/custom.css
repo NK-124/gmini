@@ -12,7 +12,7 @@ body {
 
 /* Override for light mode navbar color */
 html[data-theme='light'] .navbar {
-  background-color: rgb(233, 235, 233) !important;
+  background-color: rgb(84, 71, 71) !important;
   background-image: none !important;
 }
 
