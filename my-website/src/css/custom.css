@@ -12,7 +12,7 @@ body {
 
 /* Override for light mode navbar color */
 html[data-theme='light'] .navbar {
-  background-color: rgb(53, 208, 53) !important;
+  background-color: rgb(233, 235, 233) !important;
   background-image: none !important;
 }
 
@@ -115,7 +115,8 @@ html[data-theme='light'] .markdown {
 
 
 html[data-theme='light'] .footer {
-  color: #f9f6f6 !important;
+  background-color: black !important;
+  color: #f9f6f6 !important; /* Keep text color as is, or change if user specifies */
 }
 
 
