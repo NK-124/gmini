@@ -5,10 +5,15 @@
     margin-bottom: 0.5rem !important; /* Add some space between stacked buttons */
   }
 
-  /* Adjust individual button margins when stacked */
+  /* To ensure each button takes its own line within the column flex-direction */
   .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary {
-    margin-right: 0 !important; /* Remove horizontal margin */
+    width: 100% !important; /* Force button to take full width */
     margin-bottom: 1rem !important; /* Add vertical margin between buttons */
+  }
+
+  /* Adjust individual button margins when stacked */
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary:last-child {
+    margin-bottom: 0 !important; /* Remove bottom margin for the last button in a row */
   }
 
   /* Adjust the main button container's margin for better spacing on mobile */
