@@ -60,7 +60,7 @@ function HomepageHeader() {
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem'}}>
                     <div style={{display: 'flex', alignItems: 'center', marginRight: '5rem'}}> {/* New container for button and new image */}
                       <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '-60px'}}>
-                        <div style={{display: 'flex', flexDirection: 'row', marginBottom: '1rem'}}>
+                        <div style={{display: 'flex', marginBottom: '1rem'}}>
                           <Link
                             className="button button--secondary button--lg"
                             to="/module1/introduction-to-ros2/what-is-ros2"
@@ -73,7 +73,7 @@ function HomepageHeader() {
                             Module 2
                           </Link>
                         </div>
-                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <div style={{display: 'flex'}}>
                           <Link
                             className="button button--secondary button--lg"
                             to="/module3/introduction-to-ai-robot-brain/what-is-nvidia-isaac-platform"

@@ -143,16 +143,21 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
   margin: 0 !important;
 }
 
+/* General flex-direction for module button rows */
+.hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] {
+  flex-direction: row; /* Default to row for larger screens */
+}
+
 /* Responsive adjustments for module buttons on mobile */
 @media (max-width: 480px) {
   /* Target the container holding the two rows of buttons */
-  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"][style*="flex-direction: row"] {
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] {
     flex-direction: column !important; /* Stack buttons vertically */
     margin-bottom: 0.5rem !important; /* Add some space between stacked buttons */
   }
 
   /* Adjust individual button margins when stacked */
-  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"][style*="flex-direction: row"] .button--secondary {
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary {
     margin-right: 0 !important; /* Remove horizontal margin */
     margin-bottom: 1rem !important; /* Add vertical margin between buttons */
   }
@@ -210,7 +215,7 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
   /* Push the toggle button right next to the brand/title */
   /* This might require moving the toggle into the navbar__brand or using a wrapper */
   /* For now, let's just make sure it's visible and right-aligned */
-  .navbar__item.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  .navbar__item.toggleButton_gllP {
     order: 2; /* Ensure it's after the brand */
     margin-left: auto; /* Pushes it to the far right within the inner navbar flex */
   }
