@@ -3,6 +3,13 @@ body {
   background-image: none;
 }
 
+html[data-theme='light'] {
+  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
+  background-size: cover;
+  background-position: center !important;
+  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
+}
+
 /* Navbar background */
 .navbar {
   background-color: #070707; /* Saddle Brown color */
@@ -18,9 +25,7 @@ html[data-theme='light'] .navbar {
 html[data-theme='light'] .navbar,
 html[data-theme='light'] .hero--primary,
 html[data-theme='light'] .footer {
-  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
-  background-size: cover;
-  background-position: center !important;
+  background-image: none !important; /* Override with no background to show the full page background */
   padding: 0 !important;
   margin: 0 !important;
 }
