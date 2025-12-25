@@ -24,7 +24,7 @@
 
   /* Set robot size to 1x on mobile mode */
   .robot-container {
-    transform: translateX(-40px) scale(1) !important; /* Move 55px left, maintain scale */
+    transform: translateX(-40px) translateY(165px) scale(1) !important; /* Move -40px horizontally, 165px down, maintain scale */
   }
 
   /* Mobile Dark Mode Background for hero--primary */
