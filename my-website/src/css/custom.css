@@ -12,7 +12,7 @@ body {
 
 /* Override for light mode navbar color */
 html[data-theme='light'] .navbar {
-  background-color: rgb(223, 215, 215) !important;
+  background-color: rgb(195, 190, 190) !important;
   background-image: none !important;
 }
 
@@ -34,12 +34,15 @@ html[data-theme='light'] .hero--primary {
 
   background-position: center !important;
 
-  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
+  background-attachment: fixed;
+  color: black; /* Ensures the background covers the entire page and stays fixed */
 
 }
 
 /* Dark mode backgrounds for navbar, header, footer */
-html[data-theme='dark'] .navbar,
+html[data-theme='dark'] .navbar{
+  color: #7d2727;
+}
 html[data-theme='dark'] .footer {
   background-image: none !important; /* Ensure navbar and footer remain transparent */
   padding: 0 !important;
@@ -127,7 +130,7 @@ html[data-theme='light'] .markdown {
 
 
 html[data-theme='light'] .footer {
-  background-color: black; /* Make footer transparent */
+  background-color: rgba(69, 69, 69, 0.47); /* Make footer transparent */
   color: #050505 !important;
 }
 
