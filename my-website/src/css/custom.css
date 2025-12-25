@@ -12,7 +12,7 @@ body {
 
 /* Override for light mode navbar color */
 html[data-theme='light'] .navbar {
-  background-color: rgb(84, 71, 71) !important;
+  background-color: rgb(190, 100, 100) !important;
   background-image: none !important;
 }
 
@@ -26,21 +26,23 @@ html[data-theme='light'] .footer {
 
 /* Specific background for hero--primary in light mode */
 html[data-theme='light'] .hero--primary {
-  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
-  background-size: cover;
-  background-position: center !important;
-  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
+  background-image: none !important; /* Removed background for dark mode transfer */
 }
 
 /* Dark mode backgrounds for navbar, header, footer */
 html[data-theme='dark'] .navbar,
-html[data-theme='dark'] .hero--primary,
 html[data-theme='dark'] .footer {
-  background-image: url('https://images.unsplash.com/photo-1528112818652-9f2326201b16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') !important;
-  background-size: cover;
-  background-position: center !important;
+  background-image: none !important; /* Ensure navbar and footer remain transparent */
   padding: 0 !important;
   margin: 0 !important;
+}
+
+/* Specific background for hero--primary in dark mode */
+html[data-theme='dark'] .hero--primary {
+  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
+  background-size: cover;
+  background-position: center !important;
+  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
 }
 
 /* General overrides for main content to ensure transparency */
@@ -115,7 +117,7 @@ html[data-theme='light'] .markdown {
 
 
 html[data-theme='light'] .footer {
-  background-color: transparent !important; /* Make footer transparent */
+  background-color: black; /* Make footer transparent */
   color: #050505 !important;
 }
 
