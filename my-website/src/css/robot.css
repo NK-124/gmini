@@ -13,12 +13,13 @@
   width: 50vw; /* Use viewport width for responsiveness */
   max-width: 250px; /* Limit maximum width */
   height: 400px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end; /* Align robot to bottom of its container */
   position: relative; /* For absolute positioning of parts inside */
-  transform: translateY(-50px) scale(0.8); /* Adjust overall position and size */
+  transform: translateY(0px) scale(1.2); /* Adjust overall position and size */
   animation: idle-robot 4s infinite ease-in-out;
 }
 
@@ -40,7 +41,7 @@
 /* Base styles for all joints */
 .robot-joint {
   position: absolute;
-  background-color: var(--robot-secondary-color);
+  background-color: var(--robot-primary-color);
   border-radius: 50%;
   box-shadow: 0 0 8px 4px var(--robot-glow-color); /* Enhanced glow */
   z-index: 2;
@@ -54,6 +55,7 @@
   border-radius: 10px; /* Rounded rectangle */
   top: 0;
   z-index: 5;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +65,8 @@
 .robot-eye {
   width: 20px;
   height: 8px;
-  background-color: var(--robot-eye-color);
+  background-color: rgb(165, 247, 165);
+  color: #00FFFF;
   border-radius: 4px / 10px; /* Horizontal oval */
   position: absolute;
   top: 25px;
@@ -76,7 +79,7 @@
 .robot-mouth {
   width: 25px;
   height: 3px;
-  background-color: var(--robot-mouth-color);
+  background-color: rgb(126, 229, 159);
   border-radius: 2px;
   position: absolute;
   bottom: 15px;
@@ -249,8 +252,8 @@
 
 /* Animations */
 @keyframes idle-robot {
-  0%, 100% { transform: translateY(-50px) scale(0.8); } /* Adjust scale */
-  50% { transform: translateY(-55px) scale(0.8); }
+  0%, 100% { transform: translateY(46px) scale(1.2); } /* Adjust scale */
+  50% { transform: translateY(41px) scale(1.2); }
 }
 
 @keyframes head-bob {
