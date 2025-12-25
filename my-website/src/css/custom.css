@@ -44,7 +44,7 @@ html[data-theme='dark'] .navbar{
   color: #7d2727;
 }
 html[data-theme='dark'] .footer {
-  background-image: none !important; /* Ensure navbar and footer remain transparent */
+  background-color: rgb(44, 43, 43); /* Ensure navbar and footer remain transparent */
   padding: 0 !important;
   margin: 0 !important;
 }

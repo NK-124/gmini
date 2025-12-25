@@ -28,7 +28,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem'}}>
                     <div style={{display: 'flex', alignItems: 'center', marginRight: '5rem'}}> {/* New container for button and new image */}
-                      <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                      <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '-60px'}}>
                         <div style={{display: 'flex', flexDirection: 'row', marginBottom: '1rem'}}>
                           <Link
                             className="button button--secondary button--lg"
