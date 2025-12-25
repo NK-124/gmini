@@ -110,13 +110,13 @@ html[data-theme='light'] main,
 html[data-theme='light'] article,
 html[data-theme='light'] .theme-doc-markdown,
 html[data-theme='light'] .markdown {
-  color: #0b0c0c !important;
+  color: #222323 !important;
 }
 
 
 html[data-theme='light'] .footer {
-  background-color: black !important;
-  color: #f9f6f6 !important; /* Keep text color as is, or change if user specifies */
+  background-color: transparent !important; /* Make footer transparent */
+  color: #050505 !important;
 }
 
 
