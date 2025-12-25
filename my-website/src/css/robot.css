@@ -178,7 +178,7 @@
   left: 2.5px;
 }
 
-.robot-container:hover .robot-arm-assembly-right .robot-hand {
+.robot-container:hover .robot-arm-assembly-right {
   animation: hand-shake 0.2s infinite alternate; /* Apply hand-shake animation on hover */
 }
 
