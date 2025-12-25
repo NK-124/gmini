@@ -3,12 +3,7 @@ body {
   background-image: none;
 }
 
-html[data-theme='light'] {
-  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
-  background-size: cover;
-  background-position: center !important;
-  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
-}
+
 
 /* Navbar background */
 .navbar {
@@ -23,11 +18,18 @@ html[data-theme='light'] .navbar {
 
 /* Light mode backgrounds for navbar, header, footer */
 html[data-theme='light'] .navbar,
-html[data-theme='light'] .hero--primary,
 html[data-theme='light'] .footer {
-  background-image: none !important; /* Override with no background to show the full page background */
+  background-image: none !important; /* Ensure navbar and footer remain transparent */
   padding: 0 !important;
   margin: 0 !important;
+}
+
+/* Specific background for hero--primary in light mode */
+html[data-theme='light'] .hero--primary {
+  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
+  background-size: cover;
+  background-position: center !important;
+  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
 }
 
 /* Dark mode backgrounds for navbar, header, footer */
