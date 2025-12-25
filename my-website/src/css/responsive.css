@@ -1,19 +1,26 @@
 @media (max-width: 480px) {
-  /* Target the container holding the two rows of buttons */
-  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] {
-    flex-direction: column !important; /* Stack buttons vertically */
-    margin-bottom: 0.5rem !important; /* Add some space between stacked buttons */
-  }
-
-  /* To ensure each button takes its own line within the column flex-direction */
+  /* Adjust individual button margins when side-by-side on mobile */
   .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary {
-    width: 100% !important; /* Force button to take full width */
-    margin-bottom: 1rem !important; /* Add vertical margin between buttons */
+    width: auto !important; /* Allow buttons to take natural width */
+    margin-right: 1rem !important; /* Re-add horizontal margin between buttons */
+    margin-bottom: 0 !important; /* Remove vertical margin */
   }
 
-  /* Adjust individual button margins when stacked */
+  /* Remove margin from the last button in a pair */
   .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary:last-child {
-    margin-bottom: 0 !important; /* Remove bottom margin for the last button in a row */
+    margin-right: 0 !important;
+  }
+
+  /* Ensure the rows of buttons stack */
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] {
+    flex-direction: row; /* Ensure buttons are side-by-side within their row */
+    justify-content: center; /* Center the buttons if they don't fill the space */
+    margin-bottom: 1rem !important; /* Space between the two rows of buttons */
+  }
+
+  /* Remove bottom margin from the last row of buttons */
+  .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"]:last-child {
+    margin-bottom: 0 !important;
   }
 
   /* Adjust the main button container's margin for better spacing on mobile */
@@ -24,7 +31,7 @@
 
   /* Set robot size to 1x on mobile mode */
   .robot-container {
-    transform: translateX(-40px) translateY(165px) scale(1) !important; /* Move -40px horizontally, 165px down, maintain scale */
+    transform: translateX(-40px) translateY(265px) scale(1) !important; /* Move -40px horizontally, 165px down, maintain scale */
   }
 
   /* Mobile Dark Mode Background for hero--primary */
