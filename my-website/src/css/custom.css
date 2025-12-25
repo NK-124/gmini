@@ -65,14 +65,14 @@ main, article, .main-wrapper, .doc-wrapper, .container, .docMainContainer, .them
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #1a1a1a; /* Darker shade for primary */
-  --ifm-color-primary-dark: #110f0f; /* Black */
-  --ifm-color-primary-darker: #121111;
-  --ifm-color-primary-darkest: #131212; /* Black */
-  --ifm-color-primary-light: #514d4d;
-  --ifm-color-primary-lighter: #4d4949;
-  --ifm-color-primary-lightest: #3d3a3a;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #FFFFFF; /* White for primary text in dark mode */
+  --ifm-color-primary-dark: #F0F0F0; /* Slightly off-white */
+  --ifm-color-primary-darker: #E0E0E0;
+  --ifm-color-primary-darkest: #D0D0D0; /* Lightest gray */
+  --ifm-color-primary-light: #FFFFFF;
+  --ifm-color-primary-lighter: #FFFFFF;
+  --ifm-color-primary-lightest: #FFFFFF;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1); /* White transparent for highlight */
 }
 
 .button--secondary {
