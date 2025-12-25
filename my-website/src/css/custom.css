@@ -44,7 +44,7 @@ html[data-theme='dark'] .navbar{
   color: #7d2727;
 }
 html[data-theme='dark'] .footer {
-  background-color: rgb(44, 43, 43); /* Ensure navbar and footer remain transparent */
+  /* background-color: rgb(44, 43, 43); Ensure navbar and footer remain transparent */
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -85,7 +85,7 @@ main, article, .main-wrapper, .doc-wrapper, .container, .docMainContainer, .them
   --ifm-color-primary-light: #FFFFFF;
   --ifm-color-primary-lighter: #FFFFFF;
   --ifm-color-primary-lightest: #FFFFFF;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1); /* White transparent for highlight */
+  --docusaurus-highlighted-code-line-bg: rgb(214, 210, 210); /* White transparent for highlight */
 }
 
 .button--secondary {
