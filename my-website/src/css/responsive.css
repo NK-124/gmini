@@ -27,12 +27,12 @@
   .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] {
     margin-top: 0 !important;
     padding-top: 1rem;
-    transform: translateX(55px) !important; /* Move 55px right */
+    transform: translateX(115px) translateY(-140px)!important; /* Move 55px right */
   }
 
   /* Set robot size to 1x on mobile mode */
   .robot-container {
-    transform: translateX(-40px) translateY(295px) scale(1) !important; /* Move -40px horizontally, 165px down, maintain scale */
+    transform: translateX(-130px) translateY(200px) scale(1) !important; /* Move -40px horizontally, 165px down, maintain scale */
   }
 
   /* Mobile Dark Mode Background for hero--primary */
