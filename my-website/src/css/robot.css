@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: flex-end; /* Align robot to bottom of its container */
   position: relative; /* For absolute positioning of parts inside */
-  transform: translateX(230px) translateY(-90px) scale(1.8); /* Adjust overall position and size */
+  transform: translateX(230px) translateY(-60px) scale(1.8); /* Adjust overall position and size */
   animation: idle-robot 4s infinite ease-in-out;
 }
 
@@ -252,8 +252,8 @@
 
 /* Animations */
 @keyframes idle-robot {
-  0%, 100% { transform: translateX(230px) translateY(-44px) scale(1.8); } /* Adjust scale */
-  50% { transform: translateX(230px) translateY(-49px) scale(1.8); }
+  0%, 100% { transform: translateX(230px) translateY(-14px) scale(1.8); } /* Adjust scale */
+  50% { transform: translateX(230px) translateY(-19px) scale(1.8); }
 }
 
 @keyframes head-bob {
