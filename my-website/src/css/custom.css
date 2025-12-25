@@ -12,7 +12,7 @@ body {
 
 /* Override for light mode navbar color */
 html[data-theme='light'] .navbar {
-  background-color: rgb(190, 100, 100) !important;
+  background-color: rgb(223, 215, 215) !important;
   background-image: none !important;
 }
 
@@ -25,8 +25,17 @@ html[data-theme='light'] .footer {
 }
 
 /* Specific background for hero--primary in light mode */
+
 html[data-theme='light'] .hero--primary {
-  background-image: none !important; /* Removed background for dark mode transfer */
+
+  background-image: url('https://media.istockphoto.com/id/1417344881/photo/blank-vertical-hardcover-book-cover-mockup-standing-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=BZyHUTRhgh5E8C6KvNCv6FvfHPjh8vnu0-19emUtqH0=') !important;
+
+  background-size: cover;
+
+  background-position: center !important;
+
+  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
+
 }
 
 /* Dark mode backgrounds for navbar, header, footer */
@@ -42,7 +51,8 @@ html[data-theme='dark'] .hero--primary {
   background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
   background-size: cover;
   background-position: center !important;
-  background-attachment: fixed; /* Ensures the background covers the entire page and stays fixed */
+  background-attachment: fixed; 
+  color: #fafafa;/* Ensures the background covers the entire page and stays fixed */
 }
 
 /* General overrides for main content to ensure transparency */
