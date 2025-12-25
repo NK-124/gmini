@@ -186,6 +186,12 @@
   animation: hand-move-right 0.5s forwards; /* Apply hand-move-right animation on hover */
 }
 
+/* Change eye color to black on robot hover */
+.robot-container:hover .robot-eye {
+  background-color: black;
+}
+
+
 /* Hip Joints */
 .robot-hip-left, .robot-hip-right {
   width: 25px;
