@@ -178,6 +178,10 @@
   left: 2.5px;
 }
 
+.robot-container:hover .robot-hand {
+  animation: hand-wave 1s infinite alternate; /* Apply hand-wave animation on hover */
+}
+
 /* Hip Joints */
 .robot-hip-left, .robot-hip-right {
   width: 25px;
@@ -284,4 +288,10 @@
 @keyframes shin-movement {
   0%, 100% { transform: rotateX(0deg); }
   50% { transform: rotateX(-5deg); }
+}
+
+@keyframes hand-wave {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-20deg); } /* Rotate slightly */
+  100% { transform: rotate(0deg); }
 }

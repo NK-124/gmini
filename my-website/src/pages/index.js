@@ -11,6 +11,37 @@ import '@site/src/css/robot.css';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const robotContainerRef = React.useRef(null);
+  const leftEyeRef = React.useRef(null);
+  const rightEyeRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const handleMouseMove = (event) => {
+      if (robotContainerRef.current && leftEyeRef.current && rightEyeRef.current) {
+        const { clientX, clientY } = event;
+        const { left, top, width, height } = robotContainerRef.current.getBoundingClientRect();
+
+        const x = (clientX - left - width / 2) / (width / 2);
+        const y = (clientY - top - height / 2) / (height / 2);
+
+        const eyeMovement = 5; // Max movement in pixels
+
+        leftEyeRef.current.style.transform = `translateX(${x * eyeMovement}px) translateY(${y * eyeMovement}px)`;
+        rightEyeRef.current.style.transform = `translateX(${x * eyeMovement}px) translateY(${y * eyeMovement}px)`;
+      }
+    };
+
+    const container = robotContainerRef.current;
+    if (container) {
+      container.addEventListener('mousemove', handleMouseMove);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('mousemove', handleMouseMove);
+      }
+    };
+  }, []);
 
   const MOCKUP_MAGAZINE_IMAGE_URL = "https://media.istockphoto.com/id/2218725420/photo/mockup-magazine-on-green-grass-background.jpg?s=1024x1024&w=is&k=20&c=rio44ZIPLZGpQ1H9katre1TDcNXQKfa4zPSZKUuWq5I=";
 
@@ -58,11 +89,11 @@ function HomepageHeader() {
                         </div>
                       </div>
                       {/* Start Robot HTML Structure */}
-                      <div className="robot-container">
+                      <div className="robot-container" ref={robotContainerRef}>
                           {/* Head Assembly */}
                           <div className="robot-body-part robot-head">
-                              <div className="robot-eye robot-eye-left"></div>
-                              <div className="robot-eye robot-eye-right"></div>
+                              <div className="robot-eye robot-eye-left" ref={leftEyeRef}></div>
+                              <div className="robot-eye robot-eye-right" ref={rightEyeRef}></div>
                               <div className="robot-mouth"></div>
                               <div className="robot-antenna robot-antenna-left"></div>
                               <div className="robot-antenna robot-antenna-right"></div>
@@ -116,8 +147,7 @@ function HomepageHeader() {
       </div>
     </header>
   );
-  }
-
+}
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
