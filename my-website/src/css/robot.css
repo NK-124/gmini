@@ -179,7 +179,7 @@
 }
 
 .robot-container:hover .robot-arm-assembly-right {
-  animation: hand-shake 0.2s infinite alternate; /* Apply hand-shake animation on hover */
+  animation: hand-move-left 0.5s forwards; /* Apply hand-move-left animation on hover */
 }
 
 /* Hip Joints */
@@ -290,9 +290,7 @@
   50% { transform: rotateX(-5deg); }
 }
 
-@keyframes hand-shake {
-  0%, 100% { transform: translateX(0) rotate(0deg); }
-  25% { transform: translateX(2px) rotate(5deg); }
-  50% { transform: translateX(-2px) rotate(-5deg); }
-  75% { transform: translateX(2px) rotate(5deg); }
+@keyframes hand-move-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-40px); }
 }
