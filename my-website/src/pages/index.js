@@ -7,6 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 import '@site/src/css/robot.css';
+import '@site/src/css/custom.css';
 
 
 function HomepageHeader() {
@@ -57,9 +58,9 @@ function HomepageHeader() {
           {siteConfig.title}
         </h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem'}}>
-                    <div style={{display: 'flex', alignItems: 'center', marginRight: '5rem'}}> {/* New container for button and new image */}
-                      <div className={styles.buttons} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '-60px'}}>
+        <div className="hero-container">
+                    <div className="hero-inner-container"> {/* New container for button and new image */}
+                      <div className={clsx(styles.buttons, 'buttons-container')}>
                         <div style={{display: 'flex', marginBottom: '1rem'}}>
                           <Link
                             className="button button--secondary button--lg"

@@ -19,7 +19,7 @@ html[data-theme='light'] .navbar {
 /* Light mode backgrounds for navbar, header, footer */
 html[data-theme='light'] .navbar,
 html[data-theme='light'] .footer {
-  background-image: none !important; /* Ensure navbar and footer remain transparent */
+  background-image: none !important; /* Ensure navbar and footer remain transparent */  
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -35,7 +35,7 @@ html[data-theme='light'] .hero--primary {
   background-position: center !important;
 
   background-attachment: fixed;
-  color: black; /* Ensures the background covers the entire page and stays fixed */
+  color: black; /* Ensures the background covers the entire page and stays fixed */     
 
 }
 
@@ -44,18 +44,18 @@ html[data-theme='dark'] .navbar{
   color: #7d2727;
 }
 html[data-theme='dark'] .footer {
-  /* background-color: rgb(44, 43, 43); Ensure navbar and footer remain transparent */
+  /* background-color: rgb(44, 43, 43); Ensure navbar and footer remain transparent */  
   padding: 0 !important;
   margin: 0 !important;
 }
 
 /* Specific background for hero--primary in dark mode */
 html[data-theme='dark'] .hero--primary {
-  background-image: url('https://media.istockphoto.com/id/97997199/photo/open-book-on-black-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=A_eJAzFXUlStMq-LqzeoIVxFHwQqAEc6OviVViQmSXg=') !important;
+  background-image: url('https://images.unsplash.com/photo-1419640303358-44f0d27f48e7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fGJvb2t8ZW58MHx8MHx8fDA%3D') !important;
   background-size: cover;
   background-position: center !important;
-  background-attachment: fixed; 
-  color: #fafafa;/* Ensures the background covers the entire page and stays fixed */
+  background-attachment: fixed;
+  color: #fafafa;/* Ensures the background covers the entire page and stays fixed */    
 }
 
 /* General overrides for main content to ensure transparency */
@@ -76,7 +76,7 @@ main, article, .main-wrapper, .doc-wrapper, .container, .docMainContainer, .them
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* For readability concerns, you should choose a lighter palette in dark mode. */       
 [data-theme='dark'] {
   --ifm-color-primary: #FFFFFF; /* White for primary text in dark mode */
   --ifm-color-primary-dark: #F0F0F0; /* Slightly off-white */
@@ -99,7 +99,7 @@ html[data-theme='light'] .book-display-image {
 }
 
 html[data-theme='dark'] .book-display-image {
-  display: block; /* Images are typically block-level in Docusaurus's hero section */
+  display: block; /* Images are typically block-level in Docusaurus's hero section */   
 }
 
 
@@ -108,7 +108,7 @@ html[data-theme='dark'] .light-mode-image {
 }
 
 html[data-theme='light'] .light-mode-image {
-  display: block; /* Images are typically block-level in Docusaurus's hero section */
+  display: block; /* Images are typically block-level in Docusaurus's hero section */   
 }
 
 
@@ -152,5 +152,14 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
 
 /* Move the entire module button block up by an additional 30px */
 .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] {
-  margin-top: -90px !important; /* Original -60px, moved up by 30px means -90px */
+  margin-top: -90px !important; /* Original -60px, moved up by 30px means -90px */      
+}
+
+@media (min-width: 768px) {
+  html[data-theme='dark'] .hero--primary {
+    background-image: url('https://images.unsplash.com/photo-1414124488080-0188dcbb8834?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTYzfHxib29rfGVufDB8fDB8fHww') !important;
+    background-size: cover;
+    background-position: center !important;
+    background-attachment: fixed;
+  }
 }

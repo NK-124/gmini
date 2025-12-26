@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: flex-end; /* Align robot to bottom of its container */
   position: relative; /* For absolute positioning of parts inside */
-  transform: translateX(230px) translateY(-20px) scale(1.8); /* Adjust overall position and size */
+  transform: translateX(680px) translateY(-50px) scale(1.8) !important; /* Adjust overall position and size */
   animation: idle-robot 4s infinite ease-in-out;
 }
 
