@@ -82,12 +82,11 @@ function HomepageHeader() {
                             Module 3
                           </Link>
                           <Link
-                
                 className="button button--secondary button--lg"
                             to="/module4/introduction-to-vision-language-action/the-convergence-of-llms-and-robotics">
                             Module 4
                           </Link>
-                        </div>
+                      </div>
                       </div>
                       {/* Start Robot HTML Structure */}
                       <div className="robot-container" ref={robotContainerRef}>

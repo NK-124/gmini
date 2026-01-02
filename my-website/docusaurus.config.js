@@ -16,6 +16,12 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  customFields: {
+    backendUrl: 'http://127.0.0.1:8001',
+  },
+
+
+
 
 
   // GitHub pages deployment config.

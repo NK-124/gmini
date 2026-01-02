@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+@media (max-width: 996px) {
   /* Adjust individual button margins when side-by-side on mobile */
   .hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] .button--secondary {
     width: auto !important; /* Allow buttons to take natural width */
@@ -42,10 +42,8 @@
     padding: 0.5rem 1rem !important;
   }
 
-  /* Adjust the robot's position and size for mobile */
   .robot-container {
-    transform: translateY(2rem) scale(1.2) !important;
-    margin-top: 2rem;
+    display: none !important;
   }
 
 
@@ -94,4 +92,44 @@
      or modify React component structure.
      For CSS only, this is the best we can do for "right side of navbar heading".
      It will be on the right side of the entire navbar. */
+
+
+  /* Move the chatbot button to the bottom right on mobile */
+  body .chatbot-container {
+    display: block !important;
+    position: fixed;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+    z-index: 2000;
+  }
+  body .chatbot-container .chatToggleButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Adjust chat window size for mobile */
+  body .chatbot-container .chatWindow {
+    width: 90vw;
+    height: 80vh;
+    left: 5vw; /* Center horizontally */
+    top: 10vh; /* Position vertically */
+    right: auto;
+    bottom: auto;
+  }
+
+  body .chatbot-container .message {
+    padding: 8px;
+    max-width: 90%;
+  }
+
+  body .chatbot-container .chatInput {
+    padding: 8px;
+  }
+
+  body .chatbot-container .chatInput input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 }

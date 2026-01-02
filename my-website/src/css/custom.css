@@ -151,7 +151,7 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
 
 
 /* Move the entire module button block up by an additional 30px */
-.hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] {
+.hero--primary > .container > div[style*="display: flex"][style*="justify-content: center"] > div[style*="display: flex"][style*="align-items: center"] > div[style*="display: flex"][style*="flex-direction: column"] > div[style*="display: flex"] {
   margin-top: -90px !important; /* Original -60px, moved up by 30px means -90px */      
 }
 
@@ -162,4 +162,13 @@ html[data-theme='light'] body.intro-to-ros2-background .hero--primary {
     background-position: center !important;
     background-attachment: fixed;
   }
+}
+
+/* Specific navbar style for the RAG Chatbot page */
+.page-rag-chatbot .navbar {
+  background-color: rgb(130, 37, 202);
+}
+
+html[data-theme='light'] .page-rag-chatbot .navbar {
+  background-color: rgb(79, 67, 51) !important;
 }
